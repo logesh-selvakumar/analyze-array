@@ -15,12 +15,8 @@ function includes(item, anArray)
         {
             return 'true'
         }
-        else 
-        {
-            return 'false'
-        }
     }
-
+    return 'false'
 }
 
 
@@ -37,16 +33,12 @@ function minItem(anArray)
 
     for (let i = 1; i < anArray.length; i++) 
     {
-        let value = anArray[i]
-        if (value < min)
+        if (anArray[i] < min)
         {
-            return value
-        }
-        else 
-        {
-            return min
+            min = anArray[i];
         }
     }
+    return min;
 }
 
 // 3. WRITE YOUR OWN VERSION OF MATH.MAX (do not use Math.max)
@@ -58,19 +50,15 @@ function minItem(anArray)
 function maxItem(anArray)
 {
     let max = anArray[0];
-
+    
     for (let i = 1; i < anArray.length; i++) 
     {
-        let value = anArray[i]
-        if (value > max)
+        if (anArray[i] > max)
         {
-            return value
-        }
-        else 
-        {
-            return max
+            max = anArray[i];
         }
     }
+    return max;
 }
 
 
